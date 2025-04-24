@@ -34,6 +34,6 @@ def login_user(request):
 			login(request, user)
 			return redirect('/hello/')
 		else:
-			us = User.objects.create_user(username, "lennon@thebeatles.com", password)
+			us = User.objects.create_user(username, "", password)
 			us.save()
 			return redirect('/')
